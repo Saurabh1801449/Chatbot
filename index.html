@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Healthfy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <a class="logo" href="#"><h2>HealthyFY</h2></a>
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="physical.html">Physical</a></li>
+            <li><a href="mental.html">Mental</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main">
+        <div class="bgg">
+            <div class="txt" class="hero-text">
+                <h1>Welcome to HealthyFY</h1>
+                <h2>Your companion for mental and physical well-being.</h2>
+                <button class="btnbot">Click To Chat</button>
+            </div>
+
+            <!-- Chatbot -->
+            <div class="chatbot" >
+                <div class="bg">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                        <h1>Health Chatbot <span class="x"> &#10005</span> </h1>
+                           
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Chat messages will appear here -->
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="user-input" placeholder="Type a message...">
+                            <button onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

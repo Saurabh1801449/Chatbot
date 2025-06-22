@@ -1,0 +1,127 @@
+/* General Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fefaf6;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: #4a148c; /* Deep Purple */
+    padding: 1rem;
+    z-index: 10;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: #f3e5f5; /* Light Purple */
+}
+
+.logo h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: #f3e5f5;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ce93d8; /* Softer Purple */
+}
+
+/* Main Section */
+.main {
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #4a148c, #6a1b9a); /* Gradient */
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.resources {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    background-color: #ffffff;
+    color: #4a148c;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.resource-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.resource-card a {
+    text-decoration: none;
+    background-color: #4a148c;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resource-card a:hover {
+    background-color: #ce93d8;
+    color: #4a148c;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

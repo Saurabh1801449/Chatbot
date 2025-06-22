@@ -1,0 +1,281 @@
+/* General Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+/* transform: translateY(-100%);: Starts the navigation bar off-screen (above the viewport).
+animation: slideDown 1s ease-in-out forwards;: Animates the navbar sliding down into view when the page loads over 1 second.     */
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    z-index: 10;
+    align-items: center;
+    transform: translateY(-100%);
+    animation: slideDown 1s ease-in-out forwards;
+}
+/* Defines the slideDown animation. Gradually moves the navbar from translateY(-100%) to translateY(0) (i.e., into its original position).
+ */
+@keyframes slideDown {             /*keyframe is used to define animations i.e it consists of animation name */
+    to {
+        transform: translateY(0);
+    }
+}
+
+.logo h2 {
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 1.6rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {       /* Defines the fadeIn animation. Gradually increases the logo's opacity from 0 (invisible) to 1 (fully visible). */
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: goldenrod;
+}
+
+/* Main Section */
+
+/* linear-gradient: Creates a gradient from pink (rgba(255, 182, 193, 0.8)) to light blue (rgba(176, 224, 230, 0.8)).
+background-size: 200% 200%;: Enlarges the gradient so it can animate.
+animation: gradientMove 8s infinite;: Cycles the background gradient movement over 8 seconds, repeating infinitely.
+css
+Copy code
+ */
+.main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, rgba(255, 182, 193, 0.8), rgba(176, 224, 230, 0.8));
+    background-size: 200% 200%;
+    animation: gradientMove 8s infinite;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+/* Animates the gradient to shift horizontally from left (0%) to right (100%) and back. */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bgg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.txt h1 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+    text-align: left;
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+.txt h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    animation: zoomIn 1.2s ease-in-out 0.5s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Button Effects */
+
+.btnbot {
+    background-color: lavenderblush;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Adds a glowing box-shadow effect around the button when hovered.
+transition: Smoothly animates color and shadow changes over 0.3 seconds. */
+.btnbot:hover {
+    background-color: #ffe4e1;
+    box-shadow: 0 0 15px 5px #ffe4e1;
+}
+
+/* Chatbot */
+.chatbot {
+    width: 400px;
+    height: 500px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.chat-container {
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: lightgoldenrodyellow;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.chat-messages {
+    height: 380px;
+    overflow-y: auto;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(176, 171, 162);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+}
+
+/* User messages (right-aligned) */
+.chat-messages .message.user {
+    background-color: #d1e7dd; /* Light green for user messages */
+    text-align: right;
+    align-self: flex-end;
+    animation: slideInRight 0.5s ease-in-out;
+}
+
+/* Bot messages (left-aligned) */
+.chat-messages .message.bot {
+    background-color: #f8d7da; /* Light red for bot messages */
+    text-align: left;
+    align-self: flex-start;
+    animation: slideInLeft 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Chat Input Section */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+}
+
+.chat-input button {
+    height: 3.3rem;
+    padding: 10px 20px;
+    border: none;
+    border-bottom-right-radius: 20px;
+    background-color: bisque;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.chat-input button:hover {
+    background-color: burlywood;
+}
+
+.x {
+    position: relative;
+    left: 86px;
+    font-weight: bolder;
+    cursor: pointer;
+}

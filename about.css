@@ -1,0 +1,190 @@
+/* General Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: #344955;
+    padding: 1rem;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin-left: 2rem;
+    color: #f9aa33;
+    text-decoration: none;
+}
+
+.logo h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.links li {
+    list-style: none;
+}
+
+.links a {
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover,
+.links .active {
+    color: #f9aa33;
+}
+
+/* About Us Section */
+.about-us {
+    text-align: center;
+    padding: 8rem 2rem;
+    background: linear-gradient(to right, #344955, #232f34);
+    color: white;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Our Team Section */
+.team {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.team h2 {
+    font-size: 2rem;
+    color: #344955;
+    margin-bottom: 2rem;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Adjust layout for different screen sizes */
+}
+
+.team-member {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    color: #344955;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Us Section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #232f34;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form input {
+    background-color: #f5f5f5;
+}
+
+.contact form textarea {
+    background-color: #f5f5f5;
+    resize: none;
+}
+
+.contact form button {
+    padding: 0.8rem;
+    border: none;
+    background-color: #f9aa33;
+    color: #232f34;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #ffcc80;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #344955;
+    color: white;
+}
